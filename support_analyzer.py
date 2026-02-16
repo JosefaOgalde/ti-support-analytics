@@ -283,24 +283,24 @@ class SupportAnalyzer:
         if not self.metrics:
             return report + "\nNo hay métricas calculadas. Ejecuta calculate_metrics() primero."
         
-        report += f"\n\n📊 MÉTRICAS GENERALES"
+        report += f"\n\nMETRICAS GENERALES"
         report += f"\n  Total de tickets: {self.metrics['total_tickets']}"
         report += f"\n  Tickets resueltos: {self.metrics['tickets_resueltos']}"
         report += f"\n  Tickets abiertos: {self.metrics['tickets_abiertos']}"
-        report += f"\n  Tasa de resolución: {self.metrics['tasa_resolucion']}%"
+        report += f"\n  Tasa de resolucion: {self.metrics['tasa_resolucion']}%"
         
-        report += f"\n\n⏱️ TIEMPOS DE RESOLUCIÓN"
+        report += f"\n\nTIEMPOS DE RESOLUCION"
         report += f"\n  Tiempo promedio: {self.metrics['tiempo_promedio_resolucion_horas']:.2f} horas"
         report += f"\n  SLA 24h: {self.metrics['sla_24h']:.2f}%"
         
-        report += f"\n\n😊 SATISFACCIÓN"
-        report += f"\n  Satisfacción promedio: {self.metrics['satisfaccion_promedio']:.2f}/5"
+        report += f"\n\nSATISFACCION"
+        report += f"\n  Satisfaccion promedio: {self.metrics['satisfaccion_promedio']:.2f}/5"
         
-        report += f"\n\n📁 TICKETS POR CATEGORÍA"
+        report += f"\n\nTICKETS POR CATEGORIA"
         for categoria, cantidad in self.metrics['tickets_por_categoria'].items():
             report += f"\n  {categoria}: {cantidad}"
         
-        report += f"\n\n📞 TICKETS POR CANAL"
+        report += f"\n\nTICKETS POR CANAL"
         for canal, cantidad in self.metrics['tickets_por_canal'].items():
             report += f"\n  {canal}: {cantidad}"
         
